@@ -1,5 +1,7 @@
 # Kenny G
 
+![gem under constuction](http://www.widdiful.co.uk/90/construction1.gif)
+
 Back in the olden days, people would get together face-to-face and play
 games. Someone would eventually rise to the occasion, and self appoint themselves as the scorekeeper.
 The scorekeeper would then need to find a piece of scrap paper, and record each players score per round.
@@ -9,7 +11,7 @@ Kenny G.
 Now, Kenny G can be your domain's personal scorekeeper. There's no need to wine and dine. Simply ask him politely, and he will be happy to put his accounting skills to practice.
 
 
-![alt tag](http://33.media.tumblr.com/tumblr_lrfkpnKoei1ql60fno1_400.gif)
+![Kenny G smoking the saxaphone](http://33.media.tumblr.com/tumblr_lrfkpnKoei1ql60fno1_400.gif)
 
 
 ## Installation
