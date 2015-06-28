@@ -9,6 +9,9 @@ Kenny G.
 Now, Kenny G can be your domain's personal scorekeeper. There's no need to wine and dine. Simply ask him politely, and he will be happy to put his accounting skills to practice.
 
 
+![alt tag](http://33.media.tumblr.com/tumblr_lrfkpnKoei1ql60fno1_400.gif)
+
+
 ## Installation
 
 Add this line to your application's Gemfile:
