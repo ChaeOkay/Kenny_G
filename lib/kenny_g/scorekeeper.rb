@@ -1,7 +1,15 @@
-class Scorekeeper
-  attr_reader :winning_score
+require 'kenny_g/player'
 
-  def initialize(winning_score: 1)
+class Scorekeeper
+  attr_reader :starting_score, :players, :winning_score
+  private :players, :starting_score
+
+  def initialize(players: [], winning_score:)
     @winning_score = winning_score
+    @players = players
+  end
+
+  def add_player(name:)
+    players << Player.new(name: name)
   end
 end
