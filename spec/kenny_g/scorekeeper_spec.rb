@@ -14,4 +14,14 @@ describe Scorekeeper do
         .to eq expected_players
     end
   end
+
+  describe '#players' do
+    let(:player_params) { { name: 'Esme' } }
+    let(:expected_players) { [Scorekeeper::Player.new(player_params)] }
+
+    it 'returns a collection of players' do
+      scorekeeper.add_player(player_params)
+      expect(scorekeeper.players).to eq expected_players
+    end
+  end
 end
