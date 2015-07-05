@@ -13,6 +13,12 @@ Gem::Specification.new do |spec|
   spec.homepage      = %q{https://github.com/ChaeOkay/Kenny_G}
   spec.license       = "MIT"
 
+  spec.files        = `git ls-files`.split($/)
+  spec.require_path = "lib"
+  spec.required_ruby_version = ">=2.0.0"
+
+  spec.test_files = Dir["spec/*_spec.rb"]
+
   # Prevent pushing this gem to RubyGems.org by setting 'allowed_push_host', or
   # delete this section to allow pushing this gem to any host.
   if spec.respond_to?(:metadata)
@@ -20,10 +26,4 @@ Gem::Specification.new do |spec|
   else
     raise "RubyGems 2.0 or newer is required to protect against public gem pushes."
   end
-
-  spec.files         = `git ls-files -z`.split("\x0").reject { |f| f.match(%r{^(test|spec|features)/}) }
-  spec.bindir        = "exe"
-  spec.executables   = spec.files.grep(%r{^exe/}) { |f| File.basename(f) }
-  spec.require_paths = ["lib"]
-
 end
