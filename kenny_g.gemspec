@@ -7,11 +7,10 @@ Gem::Specification.new do |spec|
   spec.name          = "kenny_g"
   spec.version       = KennyG::VERSION
   spec.authors       = ["Chae"]
-  spec.email         = ["chaemobile@gmail.com"]
-
-  spec.summary       = %q{TODO: Write a short summary, because Rubygems requires one.}
-  spec.description   = %q{TODO: Write a longer description or delete this line.}
-  spec.homepage      = "TODO: Put your gem's website or public repo URL here."
+  spec.email         = ["chaeokay@gmail.com"]
+  spec.summary       = %q{Scorekeeping from an almost CPA}
+  spec.description   = %q{Replaces using scrap paper and pencil}
+  spec.homepage      = %q{https://github.com/ChaeOkay/Kenny_G}
   spec.license       = "MIT"
 
   # Prevent pushing this gem to RubyGems.org by setting 'allowed_push_host', or
