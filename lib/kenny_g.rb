@@ -1,7 +1,8 @@
-require 'kenny_g/scorekeeper'
+require 'kenny_g/game_setup'
 
 module KennyG
   def self.please_be_the_scorekeeper(options)
-    Scorekeeper.new(options)
+
+    GameSetup.new(options)
   end
 end

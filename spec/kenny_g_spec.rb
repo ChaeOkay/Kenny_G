@@ -1,6 +1,6 @@
 require 'spec_helper'
 require 'kenny_g'
-require 'kenny_g/scorekeeper'
+require 'kenny_g/game_setup'
 require 'kenny_g/player'
 
 describe KennyG do
