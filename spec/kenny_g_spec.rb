@@ -5,7 +5,7 @@ require 'kenny_g/game_setup'
 require 'kenny_g/player'
 
 describe KennyG do
-  let(:params)  { { winning_score: 100, players: ['shelly'] } }
+  let(:params)  { { winning_score: 100, player_names: 'shelly' } }
   let(:kenny_g) { KennyG.please_be_the_scorekeeper(params) }
 
   context '.please_be_the_scorekeeper' do
@@ -13,11 +13,19 @@ describe KennyG do
       expect(kenny_g.winning_score).to eq 100
     end
 
+    context 'with many player names' do
+      let(:player_names) { ['amy', 'elsie'] }
+      let(:params)  { { winning_score: 100, player_names: player_names } }
+      it 'has many players' do
+        expect(kenny_g.players.size).to eq player_names.size
+      end
+    end
+
     context 'with no players' do
-      let(:params)  { { winning_score: 100, players: [] } }
+      let(:params)  { { winning_score: 100, player_names: nil } }
       it 'raises an error' do
         expect{ KennyG.please_be_the_scorekeeper(params) }
-          .to raise_error(Errors::WinningScoreError)
+          .to raise_error(Errors::NoPlayerNames)
       end
     end
   end
