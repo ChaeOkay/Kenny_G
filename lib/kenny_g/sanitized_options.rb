@@ -8,6 +8,9 @@ class SanitizedOptions
     @winning_score = (options[:winning_score] ||= 0); sanitize_winning_score
   end
 
+  def instance_values
+    Hash[instance_variables.map { |name| [name[1..-1].to_sym, instance_variable_get(name)] }]
+  end
   private
 
   def sanitize_players

@@ -20,5 +20,17 @@ describe SanitizedOptions do
     expect{ described_class.new(options) }
       .to raise_error(Errors::InvalidWinningScore)
   end
+
+  context 'valid options' do
+    let(:options) { { players: ['alice'] } }
+    let(:expected_values) { { players: ['alice'], winning_score: 0 } }
+
+    describe '#instance_values' do
+      it 'returns a hash of ivars as symbols with value as the key, railsy' do
+        sanitized_options = described_class.new(options)
+        expect(sanitized_options.instance_values).to eq expected_values
+      end
+    end
+  end
 end
 
