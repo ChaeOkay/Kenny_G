@@ -16,5 +16,11 @@ describe KennyG do
       expect{ described_class.please_be_the_scorekeeper(params) }
         .to raise_error.with_message('at least one player name must be provided')
     end
+
+    it 'raises error if name is an empty string' do
+      params = { winning_score: 100, players: '' }
+      expect{ described_class.please_be_the_scorekeeper(params) }
+        .to raise_error.with_message('at least one player name must be provided')
+    end
   end
 end
