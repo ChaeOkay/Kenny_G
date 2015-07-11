@@ -1,33 +1,18 @@
 require 'spec_helper'
 require 'kenny_g'
-require 'kenny_g/errors'
 require 'kenny_g/game_setup'
 
 describe KennyG do
-  let(:params)  { { winning_score: 100, players: ['shelly'] } }
+  let(:players) { ['shelly'] }
+  let(:winning_score) { 100 }
+  let(:sanitized_options) { double('SanitizedOptions', player: players,
+                                    winning_score: winning_score) }
+  let(:options)  { { winning_score: winning_score, players: players} }
 
   describe '.please_be_the_scorekeeper' do
-    it 'call the game setup' do
-      expect(GameSetup).to receive(:new).with(params)
-      described_class.please_be_the_scorekeeper(params)
-    end
-
-    it 'raises error if no name is provided' do
-      params = { winning_score: 100, players: nil }
-      expect{ described_class.please_be_the_scorekeeper(params) }
-        .to raise_error(Errors::NoPlayerName)
-    end
-
-    it 'raises error if name is an empty string' do
-      params = { winning_score: 100, players: '' }
-      expect{ described_class.please_be_the_scorekeeper(params) }
-        .to raise_error(Errors::NoPlayerName)
-    end
-
-    it 'raises error if winning score is less than 0' do
-      params = { winning_score: -1, players: 'emily' }
-      expect{ described_class.please_be_the_scorekeeper(params) }
-        .to raise_error(Errors::InvalidWinningScore)
+    it 'calls the game setup' do
+      expect(GameSetup).to receive(:new).with(options)
+      described_class.please_be_the_scorekeeper(options)
     end
   end
 end
