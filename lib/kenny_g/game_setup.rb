@@ -10,6 +10,6 @@ class GameSetup
   end
 
   def add_player(name:)
-    players << Player.new(name: name)
+    players << Players::Player.new(name: name)
   end
 end
