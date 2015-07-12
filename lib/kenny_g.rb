@@ -25,6 +25,6 @@ class KennyG
   end
 
   def players
-    game.players
+    game.players_summary
   end
 end
