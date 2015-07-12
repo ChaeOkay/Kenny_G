@@ -56,7 +56,7 @@ To see a list of players
 
 ```
 kennyg.players
-  => { player1: 0, player2: 0 }
+  => { [name: 'player1', score: 0], [name: 'player2', score: 0] }
 ```
 
 **`#please_start_keeping_score`**
