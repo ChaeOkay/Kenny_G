@@ -7,8 +7,8 @@ describe KennyG do
   let(:options)  { { winning_score: winning_score, players: ['shelly'] } }
 
   describe '.please_be_the_scorekeeper' do
-    it 'calls the game setup' do
-      expect(GameSetup).to receive(:new).with(expected_arguments)
+    it 'creates a game' do
+      expect(Game).to receive(:new).with(expected_arguments)
       described_class.please_be_the_scorekeeper(options)
     end
   end

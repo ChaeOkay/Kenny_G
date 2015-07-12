@@ -1,4 +1,4 @@
-class GameSetup
+class Game
   attr_reader :starting_score, :players, :winning_score
   private :starting_score
 

@@ -1,6 +1,6 @@
 require 'spec_helper'
 
-describe GameSetup do
+describe Game do
   let(:options)  { { winning_score: 100, players: ['beatrix'] } }
   let(:game_setup) { described_class.new(options) }
 
