@@ -10,10 +10,10 @@ class Game
   def add_player(name)
     player = Players::Player.new(name)
     players << player
-    player.to_h
+    player.summary
   end
 
   def players_summary
-    players.map { |player| player.to_h }
+    players.map { |player| player.summary }
   end
 end
