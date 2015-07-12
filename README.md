@@ -33,12 +33,15 @@ Or install it yourself as:
 ## Usage
 
 **`.please_be_the_scorekeeper`**
-To start a new game, provide a winning score.
+To start a new game, provide a players names and a winning score
+threshold.
 
 ```
-kennyg = KennyG.please_be_the_scorekeeper(winning_score: 100)
+kennyg = KennyG.please_be_the_scorekeeper(players:
+['sally', 'fred', 'carl'], winning_score: 100)
   => #<KennyG:instance_object_number>
 ```
+Players will have a default score of 0.
 
 **`#add_player`**
 To add a player, provide a playername. The player will have a default
