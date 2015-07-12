@@ -7,7 +7,7 @@ class Game
     @players = players
   end
 
-  def add_player(name:)
-    players << Players::Player.new(name: name)
+  def add_player(name)
+    players << Players::Player.new(name)
   end
 end

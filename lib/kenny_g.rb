@@ -17,7 +17,10 @@ class KennyG
     @game = game
   end
 
-  def add_player(name:)
-    game.add_player(name: name)
+  def add_player(name)
+  end
+
+  def players
+    game.players
   end
 end
