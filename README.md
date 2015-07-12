@@ -48,7 +48,7 @@ keeping score.
 
 ```
 kennyg.add_player(playername: 'player1')
-  => { player1: 0 }
+  => { name: 'player1', score: 0 }
 ```
 
 **`#players`**

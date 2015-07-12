@@ -8,7 +8,9 @@ class Game
   end
 
   def add_player(name)
-    players << Players::Player.new(name)
+    player = Players::Player.new(name)
+    players << player
+    player.to_h
   end
 
   def players_summary

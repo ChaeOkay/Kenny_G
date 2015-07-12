@@ -10,6 +10,11 @@ describe Game do
       expect{ game_setup.add_player('lilly') }
         .to change{ game_setup.players_summary.size }.by 1
     end
+
+    it 'returns the new player summary' do
+      expect(game_setup.add_player('lil'))
+        .to eq({ name: 'lil', score: 0 })
+    end
   end
 
   describe '#players_summary' do
