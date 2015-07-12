@@ -10,4 +10,10 @@ module Errors
       'winning score must be > 0'
     end
   end
+
+  class AddPlayers < StandardError
+    def message
+      'game started, players cannot be added'
+    end
+  end
 end

@@ -3,6 +3,7 @@ require 'kenny_g/players'
 require 'kenny_g/sanitized_options'
 
 class KennyG
+  attr_accessor :game_started
   attr_reader :game
   private :game
 
@@ -15,9 +16,12 @@ class KennyG
 
   def initialize(game:)
     @game = game
+    @game_started = false
   end
 
   def add_player(name)
+    raise Errors::AddPlayers if game_started
+    game.add_player(name)
   end
 
   def players

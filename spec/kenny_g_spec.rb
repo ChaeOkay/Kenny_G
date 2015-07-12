@@ -22,6 +22,11 @@ describe KennyG do
         expect{ kenny_g.add_player('sally') }
           .to change{ kenny_g.players.size}.by 1
       end
+
+      it 'raises error if game has not started' do
+        kenny_g.game_started = true
+        expect{ kenny_g.add_player('jerry') }.to raise_error(Errors::AddPlayers)
+      end
     end
   end
 end
