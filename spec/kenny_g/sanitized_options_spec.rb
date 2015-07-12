@@ -1,6 +1,4 @@
 require 'spec_helper'
-require 'kenny_g/errors'
-require 'kenny_g/sanitized_options'
 
 describe SanitizedOptions do
   it 'raises error if no name is provided' do

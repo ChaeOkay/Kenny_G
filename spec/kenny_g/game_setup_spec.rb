@@ -1,5 +1,4 @@
 require 'spec_helper'
-require 'kenny_g/game_setup'
 
 describe GameSetup do
   let(:options)  { { winning_score: 100, players: ['beatrix'] } }

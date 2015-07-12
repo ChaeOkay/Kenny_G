@@ -1,5 +1,3 @@
-require 'kenny_g/player'
-
 class GameSetup
   attr_reader :starting_score, :players, :winning_score
   private :starting_score

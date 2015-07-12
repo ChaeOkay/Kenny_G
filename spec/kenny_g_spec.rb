@@ -1,6 +1,4 @@
 require 'spec_helper'
-require 'kenny_g'
-require 'kenny_g/game_setup'
 
 describe KennyG do
   let(:players) { Players.collection(['shelly']) }
