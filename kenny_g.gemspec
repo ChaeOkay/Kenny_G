@@ -13,7 +13,7 @@ Gem::Specification.new do |spec|
   spec.homepage      = %q{https://github.com/ChaeOkay/Kenny_G}
   spec.license       = "MIT"
 
-  spec.files        = `git ls-files`.split($/)
+  spec.files        = Dir["lib/**/*.rb"]
   spec.require_path = "lib"
   spec.required_ruby_version = ">=2.0.0"
 
