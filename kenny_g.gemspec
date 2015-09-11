@@ -19,6 +19,10 @@ Gem::Specification.new do |spec|
 
   spec.test_files = Dir["spec/*_spec.rb"]
 
+  spec.add_development_dependency "rspec", "~> 3.0"
+  spec.add_development_dependency "bundler", "~> 1.10"
+  spec.add_development_dependency "rake", "~> 10.0"
+
   # Prevent pushing this gem to RubyGems.org by setting 'allowed_push_host', or
   # delete this section to allow pushing this gem to any host.
   if spec.respond_to?(:metadata)
