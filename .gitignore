@@ -10,4 +10,4 @@ rdoc
 spec/reports/
 test/tmp
 tmp
-*.swp
+*.sw*
