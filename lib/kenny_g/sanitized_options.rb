@@ -11,6 +11,7 @@ class SanitizedOptions
   def instance_values
     Hash[instance_variables.map { |name| [name[1..-1].to_sym, instance_variable_get(name)] }]
   end
+
   private
 
   def sanitize_players
