@@ -1,7 +1,5 @@
 # coding: utf-8
-lib = File.expand_path('../lib', __FILE__)
-$LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
-require 'kenny_g/version'
+require "./lib/kenny_g/version"
 
 Gem::Specification.new do |spec|
   spec.name          = "kenny_g"
@@ -13,11 +11,10 @@ Gem::Specification.new do |spec|
   spec.homepage      = %q{https://github.com/ChaeOkay/Kenny_G}
   spec.license       = "MIT"
 
-  spec.files        = Dir["lib", "spec"]
+  spec.files        = `git ls-files`.split("\n")
+  spec.test_files   = `git ls-files spec/*`.split("\n")
   spec.require_path = "lib"
   spec.required_ruby_version = ">=2.0.0"
-
-  spec.test_files = Dir["spec/*_spec.rb"]
 
   spec.add_development_dependency "rspec", "~> 3.0"
   spec.add_development_dependency "bundler", "~> 1.10"
