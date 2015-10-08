@@ -2,12 +2,7 @@
 
 ![gem under constuction](http://www.widdiful.co.uk/90/construction1.gif)
 
-Back in time, people would get together face-to-face and play
-games. Someone would rise to the occasion, self appointing themselves as the scorekeeper.
-The scorekeeper would find a piece of scrap paper and write down each players score per round.
-
 Now, Kenny G can be your domain's personal scorekeeper. Ask him politely, and he will be happy to put his accounting skills to practice.
-
 
 ![Kenny G smoking the saxaphone](http://33.media.tumblr.com/tumblr_lrfkpnKoei1ql60fno1_400.gif)
 
