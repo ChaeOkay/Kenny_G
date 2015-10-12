@@ -1,5 +1,5 @@
 require 'kenny_g/game'
-require 'kenny_g/players'
+require 'kenny_g/player'
 require 'kenny_g/sanitized_options'
 
 
