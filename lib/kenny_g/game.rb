@@ -11,13 +11,13 @@ class Game
     players.map { |player| player.summary }
   end
 
- # def add_player(name)
- #   player = Players::Player.new(name)
- #   players << player
- #   player.summary
- # end
+  def add_player(player_params)
+    players << player_factory.new(player_params)
+  end
 
- # def players_summary
- #   players.map { |player| player.summary }
- # end
+  private
+
+  def player_factory
+    KennyG::Player
+  end
 end

@@ -10,9 +10,9 @@ describe Game do
   end
 
   describe '#add_player' do
-    xit 'increments the player count' do
-      expect{ game.add_player('lilly') }
-        .to change{ game.players_summary.size }.by 1
+    it 'adds a player to the standings' do
+      expect{ game.add_player({ name: 'lilly' }) }
+        .to change{ game.standings.size }.by 1
     end
   end
 end
