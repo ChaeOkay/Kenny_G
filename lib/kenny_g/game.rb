@@ -1,6 +1,5 @@
 class Game
-  attr_reader :starting_score, :players, :winning_score
-  private :starting_score, :players
+  attr_reader :winning_score
 
   def initialize(players: [], winning_score:)
     @winning_score = winning_score
@@ -16,6 +15,7 @@ class Game
   end
 
   private
+  attr_reader :starting_score, :players
 
   def player_factory
     KennyG::Player
