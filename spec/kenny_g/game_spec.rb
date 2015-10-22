@@ -5,7 +5,7 @@ describe Game do
   let(:player1) { Player.new(name: 'sally', score: 50) }
   subject(:game) { described_class.new(players: [player, player1], winning_score: 100) }
 
-  specify 'standings' do
+  specify '#standings' do
     expect(game.standings).to eq([player.summary, player1.summary])
   end
 
