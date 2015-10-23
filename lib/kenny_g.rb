@@ -1,5 +1,5 @@
 require 'kenny_g/game'
-require 'kenny_g/new_game'
+require 'kenny_g/game_setup'
 require 'kenny_g/player'
 require 'kenny_g/sanitized_options'
 
