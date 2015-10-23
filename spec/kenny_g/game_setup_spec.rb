@@ -11,4 +11,13 @@ describe GameSetup do
       expect(described_class.new(params)).to be_a(GameSetup)
     end
   end
+
+  context 'after instantiation' do
+    let(:params) { { players: ['alice'], winning_score: 30 } }
+    subject(:new_game) { described_class.new(params) }
+
+    specify '#summary' do
+      expect(new_game.summary).to eq params
+    end
+  end
 end
