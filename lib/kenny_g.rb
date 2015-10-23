@@ -13,6 +13,8 @@ class KennyG
   def self.please_be_the_scorekeeper(options)
     sanitized_options = SanitizedOptions.new(options)
 
+    #@new_game = NewGame.build(options)
+    #@new_game can add players
 
     #We need an object is really a pre-game object. It can add/remove players to the collection
     #and accept changes to the sanitized params until pre-game becomes a game
