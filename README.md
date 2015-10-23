@@ -32,7 +32,7 @@ threshold.
 ```
 kennyg = KennyG.please_be_the_scorekeeper(players:
 ['sally', 'fred', 'carl'], winning_score: 100)
-  => #<KennyG:instance_object_number>
+  => #<GameSetup:instance_object_number>
 ```
 Players will have a default score of 0.
 
