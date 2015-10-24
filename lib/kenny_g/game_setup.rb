@@ -1,6 +1,6 @@
 require_relative 'game'
 
-class GameSetup
+class GameSetup < Game
   def initialize(players: [], winning_score: 0)
     @players_setup = players
     @winning_score_setup = winning_score
