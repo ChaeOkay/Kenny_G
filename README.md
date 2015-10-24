@@ -34,7 +34,19 @@ kennyg = KennyG.please_be_the_scorekeeper(players:
 ['sally', 'fred', 'carl'], winning_score: 100)
   => #<GameSetup:instance_object_number>
 ```
-Players will have a default score of 0.
+
+**`#details`**
+To show game information, request details.
+
+```
+  kenny_g.details
+  => {
+       players: ['sally', 'fred', 'carl'],
+       status: :game_setup,
+       winning_score: 50
+     }
+```
+
 
 **`#add_player`**
 To add a player, provide a playername. The player will have a default
@@ -44,14 +56,6 @@ keeping score.
 ```
 kennyg.add_player(playername: 'player1')
   => { name: 'player1', score: 0 }
-```
-
-**`#players`**
-To see a list of players
-
-```
-kennyg.players
-  => { [name: 'player1', score: 0], [name: 'player2', score: 0] }
 ```
 
 **`#please_start_keeping_score`**
