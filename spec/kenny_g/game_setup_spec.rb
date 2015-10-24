@@ -26,4 +26,10 @@ describe GameSetup do
       expect(game_setup.details[:winning_score]).to eq winning_score
     end
   end
+
+  describe '#start_game' do
+    it 'returns a game' do
+      expect(game_setup.start_game).to be_a Game
+    end
+  end
 end

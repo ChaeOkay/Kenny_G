@@ -57,17 +57,12 @@ kennyg.add_player(playername: 'player1')
   => { name: 'player1', score: 0 }
 ```
 
-**`#please_start_keeping_score`**
+**`#start_game`**
 Let Kenny G know when the game play begins to start writing scores.
 
 ```
-kennyg.please_start_keeping_score
-  => {
-       0: {
-            player1: 0,
-            player2: 0
-       }
-     }
+kenny_g.start_game
+  => <#Game>
 ```
 
 **`#write`**

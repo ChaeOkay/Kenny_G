@@ -11,6 +11,10 @@ class GameSetup
     end
    end
 
+  def start_game
+    Game.new(game_setup: self)
+  end
+
    private
 
    def symbolize_ivar(variable)
