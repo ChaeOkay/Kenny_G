@@ -25,13 +25,12 @@ Or install it yourself as:
 
 ## Usage
 
-**`.please_be_the_scorekeeper`**
+**`.setup_game`**
 To start a new game, provide a players names and a winning score
 threshold.
 
 ```
-kennyg = KennyG.please_be_the_scorekeeper(players:
-['sally', 'fred', 'carl'], winning_score: 100)
+kenny_g = KennyG.setup_game(players: ['sally', 'fred', 'carl'], winning_score: 100)
   => #<GameSetup:instance_object_number>
 ```
 
