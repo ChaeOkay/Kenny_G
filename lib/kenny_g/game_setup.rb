@@ -12,7 +12,7 @@ class GameSetup
    end
 
   def start_game
-    Game.new(game_setup: self)
+    GamePlay.new(game_setup: self)
   end
 
    private

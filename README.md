@@ -52,7 +52,7 @@ Let Kenny G know when the game play begins to start writing scores.
 
 ```
 kenny_g.start_game
-  => <#Game>
+  => <#GamePlay>
 ```
 
 **TODO**

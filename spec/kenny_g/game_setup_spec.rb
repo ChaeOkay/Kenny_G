@@ -28,8 +28,8 @@ describe GameSetup do
   end
 
   describe '#start_game' do
-    it 'returns a game' do
-      expect(game_setup.start_game).to be_a Game
+    it 'returns a game play' do
+      expect(game_setup.start_game).to be_a GamePlay
     end
   end
 end

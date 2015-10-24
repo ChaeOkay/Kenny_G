@@ -1,4 +1,4 @@
-require 'kenny_g/game'
+require 'kenny_g/game_play'
 require 'kenny_g/game_setup'
 
 module KennyG
