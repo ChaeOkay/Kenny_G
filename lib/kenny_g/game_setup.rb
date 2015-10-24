@@ -6,7 +6,7 @@ class GameSetup < Game
     @winning_score_setup = winning_score
   end
 
-  def start_game
+  def play_game
     GamePlay.new(game_setup: self)
   end
 

@@ -10,9 +10,9 @@ describe GameSetup do
     end
   end
 
-  describe '#start_game' do
+  describe '#play_game' do
     it 'returns a game play' do
-      expect(game_setup.start_game).to be_a GamePlay
+      expect(game_setup.play_game).to be_a GamePlay
     end
   end
 end

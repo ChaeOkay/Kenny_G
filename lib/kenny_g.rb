@@ -7,9 +7,9 @@ module KennyG
       GameSetup.new(game_params)
     end
 
-    def start_game(game_params = {})
+    def play_game(game_params = {})
       setup = setup_game(game_params)
-      setup.start_game
+      setup.play_game
     end
   end
 end

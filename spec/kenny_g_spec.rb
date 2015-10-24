@@ -7,9 +7,9 @@ describe KennyG do
     end
   end
 
-  describe '.start_game' do
+  describe '.play_game' do
     it 'returns a game play' do
-      expect(described_class.start_game).to be_a(GamePlay)
+      expect(described_class.play_game).to be_a(GamePlay)
     end
   end
 end
