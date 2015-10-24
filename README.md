@@ -31,7 +31,7 @@ threshold.
 
 ```
 kenny_g = KennyG.setup_game(players: ['sally', 'fred', 'carl'], winning_score: 100)
-  => #<GameSetup:instance_object_number>
+  => #<GameSetup>
 ```
 
 **`#details`**
@@ -47,6 +47,16 @@ To show game information, request details.
 ```
 
 
+**`#start_game`**
+Let Kenny G know when the game play begins to start writing scores.
+
+```
+kenny_g.start_game
+  => <#Game>
+```
+
+**TODO**
+
 **`#add_player`**
 To add a player, provide a playername. The player will have a default
 score of 0. Players cannot be added after Kenny G starts
@@ -57,13 +67,6 @@ kennyg.add_player(playername: 'player1')
   => { name: 'player1', score: 0 }
 ```
 
-**`#start_game`**
-Let Kenny G know when the game play begins to start writing scores.
-
-```
-kenny_g.start_game
-  => <#Game>
-```
 
 **`#write`**
 To write a score, Kenny G will need the round number, a playername, and
@@ -113,6 +116,7 @@ player scores per round.
 ```
 
 
+
 ## Development
 
 After checking out the repo, run `bin/setup` to install dependencies. Then, run `rake false` to run the tests. You can also run `bin/console` for an interactive prompt that will allow you to experiment.
@@ -127,4 +131,3 @@ Bug reports and pull requests are welcome on GitHub at https://github.com/ChaeOk
 ## License
 
 The gem is available as open source under the terms of the [MIT License](http://opensource.org/licenses/MIT).
-
