@@ -12,10 +12,4 @@ describe Player do
       expect(players.size).to eq users.size
     end
   end
-
-  describe '#details' do
-    it 'provides the user name, points history, and points total' do
-      expect(player.details).to eq({ user: user, points: [0], points_total: 0 })
-    end
-  end
 end
