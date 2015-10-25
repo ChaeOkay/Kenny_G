@@ -1,5 +1,5 @@
 require_relative 'game_setup'
-require_relative 'null_player'
+require_relative '../players/null_player'
 
 class QuickGameSetup < GameSetup
   def initialize(players: [], winning_score: 0)

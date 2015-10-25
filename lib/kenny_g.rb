@@ -1,5 +1,5 @@
-require 'kenny_g/quick_game_setup'
-require 'kenny_g/game_setup'
+require 'kenny_g/games/quick_game_setup'
+require 'kenny_g/games/game_setup'
 
 module KennyG
   class << self

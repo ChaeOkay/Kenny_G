@@ -1,4 +1,5 @@
 require 'spec_helper'
+require 'kenny_g/games/game_play'
 
 describe GamePlay do
   let(:details) { { players: ['hi'], winning_score: 200 } }
