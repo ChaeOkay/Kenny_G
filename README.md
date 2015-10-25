@@ -26,12 +26,32 @@ Or install it yourself as:
 ## Usage
 
 **`.setup_game`**
-To start a new game, provide a players names and a winning score
-threshold.
+Kenny G has a game setup mode where parameters can be delcared and adjusted, and are not required at instantiation.
 
 ```
 kenny_g = KennyG.setup_game(players: ['sally', 'fred', 'carl'], winning_score: 100)
   => #<GameSetup>
+
+kenny_g = KennyG.setup_game
+  => #<GameSetup>
+```
+
+When setup is complete, let Kenny G know to go into game play mode.
+
+```
+kenny_g.play_game
+  => <#GamePlay>
+```
+
+**`.play_game`**
+To go directly into game play mode! If no parameters are provided, a single player is assume.
+
+```
+kenny_g = KennyG.play_game(players: ['sally', 'fred', 'carl'], winning_score: 100)
+  => #<GamePlay>
+
+kenny_g = KennyG.play_game
+  => #<GamePlay>
 ```
 
 **`#details`**
@@ -46,14 +66,6 @@ To show game information, request details.
      }
 ```
 
-
-**`#start_game`**
-Let Kenny G know when the game play begins to start writing scores.
-
-```
-kenny_g.start_game
-  => <#GamePlay>
-```
 
 **TODO**
 
