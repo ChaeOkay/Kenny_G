@@ -55,7 +55,7 @@ kenny_g = KennyG.play_game
 ```
 
 **`#details`**
-To show game information, request details.
+To show game information, request details in any state.
 
 ```
   kenny_g.details
