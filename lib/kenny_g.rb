@@ -13,7 +13,7 @@ module KennyG
     alias_method :start_game, :play_game
 
     def details
-      "Nothing to do yet! Kick things off by running `KennyG.game_setup` or `KennyG.play_game`."
+      "Nothing to report yet! Kick things off by running `KennyG.game_setup` or `KennyG.play_game`."
     end
   end
 end
