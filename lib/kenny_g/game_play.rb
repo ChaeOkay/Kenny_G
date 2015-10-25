@@ -1,5 +1,4 @@
 require_relative 'game'
-require_relative 'game_setup'
 
 class GamePlay < Game
   def initialize(game_setup:)

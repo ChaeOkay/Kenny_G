@@ -1,4 +1,5 @@
 require_relative 'game'
+require_relative 'game_play'
 
 class GameSetup < Game
   def initialize(players: [], winning_score: 0)

@@ -1,4 +1,4 @@
-require 'kenny_g/game_play'
+require 'kenny_g/quick_game_setup'
 require 'kenny_g/game_setup'
 
 module KennyG
@@ -8,8 +8,7 @@ module KennyG
     end
 
     def play_game(game_params = {})
-      setup = setup_game(game_params)
-      setup.play_game
+      QuickGameSetup.new(game_params).play_game
     end
   end
 end
