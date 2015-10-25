@@ -1,4 +1,8 @@
 class Player
+  def self.convert_users(users)
+    users.map { |user| new(user: user) }
+  end
+
   def initialize(user:, starting_points: 0)
     @points = [starting_points]
     @user = user

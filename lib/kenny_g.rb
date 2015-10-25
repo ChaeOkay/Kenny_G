@@ -4,7 +4,9 @@ require 'kenny_g/games/game_setup'
 module KennyG
   class << self
     def setup_game(game_params = {})
-      GameSetup.new(game_params)
+      game_setup_params = {}
+      game_setup_params[:players] = Player.convert_users(game_params[:players] || {})
+      GameSetup.new(game_setup_params)
     end
 
     def play_game(game_params = {})
