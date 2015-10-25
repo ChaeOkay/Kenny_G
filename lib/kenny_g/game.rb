@@ -1,9 +1,5 @@
+require_relative 'game_details'
+
 class Game
-  def details
-    {
-      players: players,
-      status: status,
-      winning_score: winning_score,
-    }
-  end
+  include GameDetails
 end

@@ -1,7 +1,22 @@
 require 'spec_helper'
 
-describe Game do
-  subject(:game) { described_class.new }
+describe 'GameDetailsModule' do
+
+  class SomeGame
+    include GameDetails
+
+    def players
+      ['a']
+    end
+
+    def status
+      :fancy
+    end
+
+    def winning_score
+      1
+    end
+  end
 
   describe '#details' do
     it 'raises a NameError without method implementations' do
@@ -10,26 +25,11 @@ describe Game do
 
     context 'with valid implementation' do
       let(:expected_values) { { players: ['a'], status: :fancy, winning_score: 1 } }
-      let(:game_child) { GameChild.new }
+      let(:some_game) { SomeGame.new }
 
       it 'provides player, status, and winning_score information' do
-        expect(game_child.details).to eq expected_values
+        expect(some_game.details).to eq expected_values
       end
     end
   end
 end
-
-class GameChild < Game
-  def players
-    ['a']
-  end
-
-  def status
-    :fancy
-  end
-
-  def winning_score
-    1
-  end
-end
-
