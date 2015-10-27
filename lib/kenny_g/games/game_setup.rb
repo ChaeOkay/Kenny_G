@@ -1,5 +1,6 @@
 require_relative 'game'
 require_relative 'game_play'
+require_relative '../players/player'
 
 class GameSetup < Game
   def initialize(game_factory: GamePlay,
