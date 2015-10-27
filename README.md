@@ -75,56 +75,23 @@ kennyg.add_player(user: 'player1')
   => { user: 'player1', score: 0 }
 ```
 
+**`#score`**
+To write a score, Kenny G will need a user and a score. Player details will be returned.
+
+```
+kennyg.score(user: :player1, score: 7 }
+  => {
+       user: :player1,
+       points: [0,7],
+       points_total: 7
+     }
+```
+
 **TODO**
 
-
-**`#write`**
-To write a score, Kenny G will need the round number, a playername, and
-the score. All of the player scores will be returned for the given round.
-
-```
-kennyg.write(1, { playername: :player1, score: 7 }
-  => {
-       1: {
-            player1: 7,
-            player2: 0,
-            player3: 0
-       }
-     }
-```
-
-If a player's score meets or exceeds the winning score, Kenny G will
-reutrn a celebratory message.
-
-```
-  => {
-       game_over!: {
-            winner: :player1,
-            score: 7
-       }
-     }
-
-```
-
-**`#history`**
-After Kenny G has started keeping score, he can retun a history of
-player scores per round.
-
-```
-  => {
-       0: {
-            player1: 0,
-            player2: 0,
-            player3: 0
-       },
-       2: {
-            player1: 7,
-            player2: 2,
-            player3: 1
-       }
-     }
-```
-
+*  rethink points stored on players
+*  point rounds
+*  game_end
 
 
 ## Development

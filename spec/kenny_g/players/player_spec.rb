@@ -12,4 +12,10 @@ describe Player do
       expect(players.size).to eq users.size
     end
   end
+
+  describe '#score' do
+    it 'is included in the point total' do
+      expect{ player.score 5 }.to change{ player.details[:points_total] }.by 5
+    end
+  end
 end

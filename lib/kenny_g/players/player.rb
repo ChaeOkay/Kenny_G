@@ -12,6 +12,10 @@ class Player
     @user = user
   end
 
+  def score(points)
+    @points << points
+  end
+
   private
   attr_reader :points, :user
 end
