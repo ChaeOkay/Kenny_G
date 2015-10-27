@@ -9,7 +9,7 @@ class GameSetup < Game
                  winning_score: 0)
 
     @game_factory = game_factory
-    @player_facotory = player_factory
+    @player_factory = player_factory
     @players_setup = player_factory.convert_users(players)
     @winning_score_setup = winning_score
   end
@@ -19,8 +19,13 @@ class GameSetup < Game
   end
   alias_method :start_game, :play_game
 
+  def add_player(player_params)
+    @players_setup << player_factory.new(player_params)
+  end
+
   private
   attr_reader :game_factory,
+              :player_factory,
               :players_setup,
               :winning_score_setup
 

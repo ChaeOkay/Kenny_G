@@ -66,18 +66,16 @@ To show game information, request details in any state.
      }
 ```
 
+**`#add_player`**
+To add a player, provide a user. The player will have a default
+score of 0. Players can only be added in game setup mode.
+
+```
+kennyg.add_player(user: 'player1')
+  => { user: 'player1', score: 0 }
+```
 
 **TODO**
-
-**`#add_player`**
-To add a player, provide a playername. The player will have a default
-score of 0. Players cannot be added after Kenny G starts
-keeping score.
-
-```
-kennyg.add_player(playername: 'player1')
-  => { name: 'player1', score: 0 }
-```
 
 
 **`#write`**

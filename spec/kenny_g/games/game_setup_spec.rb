@@ -15,4 +15,11 @@ describe GameSetup do
       expect(game_setup.play_game).to be_a GamePlay
     end
   end
+
+  describe '#add_player' do
+    it 'adds a player to the game setup' do
+      expect{ game_setup.add_player({user: 'meg'}) }.
+        to change{game_setup.details[:players].size}.by 1
+    end
+  end
 end
