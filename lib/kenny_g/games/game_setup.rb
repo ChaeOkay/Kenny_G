@@ -17,6 +17,7 @@ class GameSetup < Game
   def play_game
     game_factory.new(game_setup: self)
   end
+  alias_method :start_game, :play_game
 
   private
   attr_reader :game_factory,
