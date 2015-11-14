@@ -26,57 +26,35 @@ Or install it yourself as:
 ## Usage
 
 **`.setup_game`**
-Kenny G has a game setup mode where parameters can be delcared and adjusted, and are not required at instantiation.
+Kenny G has a game setup mode where players and a winning score can be delcared and adjusted.
 
 ```
-kenny_g = KennyG.setup_game(players: ['sally', 'fred', 'carl'], winning_score: 100)
+kenny_g = KennyG.setup_game(players: ['sally', 'fred', 'carl'], shared_target: 100)
   => #<GameSetup>
 
 kenny_g = KennyG.setup_game
   => #<GameSetup>
 ```
 
-When setup is complete, let Kenny G know to go into game play mode.
-
-```
-kenny_g.play_game
-  => <#GamePlay>
-```
-
-**`.play_game`**
-To go directly into game play mode! If no parameters are provided, a single player is assume.
-
-```
-kenny_g = KennyG.play_game(players: ['sally', 'fred', 'carl'], winning_score: 100)
-  => #<GamePlay>
-
-kenny_g = KennyG.play_game
-  => #<GamePlay>
-```
-
-**`#details`**
-To show game information, request details in any state.
-
-```
-  kenny_g.details
-  => {
-       players: ['sally', 'fred', 'carl'],
-       status: :game_setup,
-       winning_score: 50
-     }
-```
-
 **`#add_player`**
-To add a player, provide a user. The player will have a default
-score of 0. Players can only be added in game setup mode.
+Players can only be added in game setup mode. To add a player, provide a user. The player will have a default
+score of 0.
 
 ```
 kennyg.add_player(user: 'player1')
   => { user: 'player1', score: 0 }
 ```
 
+**`.play_game`**
+To start recording scores, let KennyG know that the game is being played.
+
+```
+kenny_g.play_game
+  => <#GamePlay>
+```
+
 **`#score`**
-To write a score, Kenny G will need a user and a score. Player details will be returned.
+Scores can only be written in game play mode. To write a score, Kenny G will need a user and a point amount. Player details will be returned.
 
 ```
 kennyg.score(user: :player1, score: 7 }
@@ -87,11 +65,36 @@ kennyg.score(user: :player1, score: 7 }
      }
 ```
 
+**`#details`**
+To show game or player information, ask for details.
+
+```
+  kenny_g.details
+  => {
+       players: ['sally', 'fred', 'carl'],
+       status: :game_setup,
+       winning_score: 50
+     }
+```
+
+**`Quick Play`**
+
+If no game setup is needed, head directly into game play mode where a single player assumed with no winning target threshold.
+
+```
+kenny_g = KennyG.play_game
+  => #<GamePlay>
+```
+
 **TODO**
 
-*  rethink points stored on players
-*  point rounds
+*  players should have a target
+*  winning_score should be a shared target
+*  maybe a game is more like a competition, and a player is a competitor
+*  games play should not know the player target, I don't think
 *  game_end
+*  scoring for quick play
+*  point rounds
 
 
 ## Development
