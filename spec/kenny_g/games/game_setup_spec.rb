@@ -4,9 +4,8 @@ describe GameSetup do
   subject(:game_setup) { described_class.new }
 
   describe '#details' do
-    it 'displays game setup players, winning_score, and status' do
-      details = { players: [], winning_score: 0, status: :game_setup }
-      expect(game_setup.details).to eq details
+    specify 'shared_target' do
+      expect(subject.details[:shared_target]).to eq 0
     end
   end
 

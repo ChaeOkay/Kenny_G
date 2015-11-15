@@ -3,7 +3,7 @@ module GameDetails
     {
       players: players,
       status: status,
-      winning_score: winning_score,
+      shared_target: shared_target,
     }
   end
 end

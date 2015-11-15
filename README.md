@@ -73,7 +73,7 @@ To show game or player information, ask for details.
   => {
        players: ['sally', 'fred', 'carl'],
        status: :game_setup,
-       winning_score: 50
+       shared_target: 50
      }
 ```
 
@@ -89,7 +89,6 @@ kenny_g = KennyG.play_game
 **TODO**
 
 *  players should have a target
-*  winning_score should be a shared target
 *  maybe a game is more like a competition, and a player is a competitor
 *  games play should not know the player target, I don't think
 *  game_end

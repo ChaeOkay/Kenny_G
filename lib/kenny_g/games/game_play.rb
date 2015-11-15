@@ -3,7 +3,7 @@ require_relative 'game'
 class GamePlay < Game
   def initialize(game_setup:)
     @game_players = [game_setup.details[:players]].flatten
-    @game_winning_score = game_setup.details[:winning_score]
+    @game_target = game_setup.details[:shared_target]
   end
 
   def score(user_points)
@@ -13,7 +13,7 @@ class GamePlay < Game
   end
 
   private
-  attr_reader :game_players, :game_winning_score
+  attr_reader :game_players, :game_target
 
   def find_player(user)
     players.select { |p| p == user }.first
@@ -27,7 +27,7 @@ class GamePlay < Game
     :game_play
   end
 
-  def winning_score
-    game_winning_score
+  def shared_target
+    game_target
   end
 end

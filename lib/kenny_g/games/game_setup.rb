@@ -6,12 +6,12 @@ class GameSetup < Game
   def initialize(game_factory: GamePlay,
                  players: [],
                  player_factory: Player,
-                 winning_score: 0)
+                 shared_target: 0)
 
     @game_factory = game_factory
     @player_factory = player_factory
     @players_setup = player_factory.convert_users(players)
-    @winning_score_setup = winning_score
+    @target_setup = shared_target
   end
 
   def play_game
@@ -27,7 +27,7 @@ class GameSetup < Game
   attr_reader :game_factory,
               :player_factory,
               :players_setup,
-              :winning_score_setup
+              :target_setup
 
   def players
     players_setup
@@ -37,7 +37,7 @@ class GameSetup < Game
     :game_setup
   end
 
-  def winning_score
-    winning_score_setup
+  def shared_target
+    target_setup
   end
 end

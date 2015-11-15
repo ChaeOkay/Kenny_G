@@ -13,8 +13,8 @@ describe 'GameDetailsModule' do
         expect(subject[:status]).to eq :fancy
       end
 
-      specify 'winning_score' do
-        expect(subject[:winning_score]).to eq 1
+      specify 'shared_target' do
+        expect(subject[:shared_target]).to eq 1
       end
     end
   end
@@ -30,7 +30,7 @@ describe 'GameDetailsModule' do
       :fancy
     end
 
-    def winning_score
+    def shared_target
       1
     end
   end
