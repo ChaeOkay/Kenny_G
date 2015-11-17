@@ -6,9 +6,9 @@ class GamePlay < Game
     @game_target = shared_target
   end
 
-  def score(user_points)
-    player = find_player(user_points[:user])
-    player.score(user_points[:points])
+  def score(user:, points:)
+    player = find_player(user)
+    player.score(points)
     player.details
   end
 

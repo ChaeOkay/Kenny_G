@@ -60,7 +60,7 @@ kenny_g.play_game
 Scores can only be written in game play mode. To write a score, Kenny G will need a user and a point amount. Player details will be returned.
 
 ```
-kennyg.score(user: 'player1', score: 7 }
+kennyg.score(user: 'player1', points: 7 }
   => { player1: {
          points: [3, 7],
          points_total: 10
