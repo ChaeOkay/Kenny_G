@@ -2,30 +2,28 @@ require 'spec_helper'
 require 'kenny_g/players/player_details'
 
 describe 'PlayerDetailsModule' do
-  context 'when included' do
-    subject(:player_details) { SomePlayer.new.details }
+  describe '#details' do
+    let(:points) { [1,2,3] }
+    let(:user) { 'Fox' }
+    subject(:player_details) { SomePlayer.new(points: points, user: user).details }
 
-    describe '#details' do
-      specify 'points' do
-        expect(subject[:points]).to eq [1,2,3]
-      end
+    context 'user points' do
+      subject(:player_details_points) { player_details[user.intern][:points] }
+      it { is_expected.to eq points }
+    end
 
-      specify 'points_total' do
-        expect(subject[:points_total]).to eq 6
-      end
-
-      specify 'user' do
-        expect(subject[:user]).to eq 'Fox'
-      end
+    context 'user points total' do
+      subject(:player_details_points_total) { player_details[user.intern][:points_total] }
+      it { is_expected.to eq points.inject(&:+) }
     end
   end
 
   class SomePlayer
     include PlayerDetails
 
-    def initialize
-      @points = [1,2,3]
-      @user = 'Fox'
+    def initialize(points:, user:)
+      @points = points
+      @user = user
     end
 
     private

@@ -1,9 +1,9 @@
 module PlayerDetails
   def details
-    {
-      user: user,
-      points: points,
-      points_total: points_total
+    { user.intern => {
+        points: points,
+        points_total: points_total
+      }
     }
   end
 
