@@ -12,6 +12,10 @@ describe GamePlay do
     specify 'shared_target' do
       expect(subject.details[:shared_target]).to eq shared_target
     end
+
+    specify 'status' do
+      expect(subject.details[:status]).to eq :game_play
+    end
   end
 
   describe '#score' do
