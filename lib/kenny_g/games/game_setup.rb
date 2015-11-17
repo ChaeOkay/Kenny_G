@@ -30,7 +30,7 @@ class GameSetup < Game
               :target_setup
 
   def players
-    players_setup
+    Hash[player_list]
   end
 
   def status
@@ -39,5 +39,9 @@ class GameSetup < Game
 
   def shared_target
     target_setup
+  end
+
+  def player_list
+    players_setup.map { |player| player.details.flatten }
   end
 end

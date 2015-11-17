@@ -1,13 +1,12 @@
 require 'spec_helper'
 
 describe QuickGameSetup do
-  let(:null_player) { 'no_player' }
-  before { allow(NullPlayer).to receive(:new) { null_player } }
+  let(:null_player) { double('NullPlayer', user: 'annon', points: [0]) }
   subject(:quick_game_setup) { described_class.new }
 
   describe '#details' do
     specify 'players' do
-      expect(subject.details[:players]).to eq [null_player]
+      expect(subject.details[:players].size).to eq 1
     end
 
     specify 'status' do
