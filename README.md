@@ -60,12 +60,11 @@ kenny_g.play_game
 Scores can only be written in game play mode. To write a score, Kenny G will need a user and a point amount. Player details will be returned.
 
 ```
-kennyg.score(user: :player1, score: 7 }
-  => {
-       user: :player1,
-       points: [0,7],
-       points_total: 7
-     }
+kennyg.score(user: 'player1', score: 7 }
+  => { player1: {
+         points: [3, 7],
+         points_total: 10
+     },
 ```
 
 **`#details`**
@@ -74,7 +73,16 @@ To show game or player information, ask for details.
 ```
   kenny_g.details
   => {
-       players: ['sally', 'fred', 'carl'],
+       players: {
+            carl: {
+              points: [0,1],
+              points_total: 1
+            },
+            rose: {
+              points: [0,5],
+              points_total: 5
+            }
+       },
        status: :game_setup,
        shared_target: 50
      }

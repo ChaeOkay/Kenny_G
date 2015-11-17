@@ -2,6 +2,7 @@ require_relative 'player_details'
 
 class Player
   include PlayerDetails
+  attr_reader :user
 
   def self.convert_users(users)
     users.map { |user| new(user: user) }
@@ -17,5 +18,5 @@ class Player
   end
 
   private
-  attr_reader :points, :user
+  attr_reader :points
 end

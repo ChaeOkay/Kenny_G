@@ -15,7 +15,8 @@ class GameSetup < Game
   end
 
   def play_game
-    game_factory.new(game_setup: self)
+    game_factory.new(players: players_setup,
+                     shared_target: target_setup)
   end
   alias_method :start_game, :play_game
 

@@ -1,9 +1,9 @@
 require_relative 'game'
 
 class GamePlay < Game
-  def initialize(game_setup:)
-    @game_players = [game_setup.details[:players]].flatten
-    @game_target = game_setup.details[:shared_target]
+  def initialize(players:, shared_target:)
+    @game_players = players
+    @game_target = shared_target
   end
 
   def score(user_points)
@@ -16,11 +16,11 @@ class GamePlay < Game
   attr_reader :game_players, :game_target
 
   def find_player(user)
-    players.select { |p| p == user }.first
+    game_players.find { |player| player.user.to_s == user.to_s }
   end
 
   def players
-    game_players
+    Hash[player_list]
   end
 
   def status
@@ -29,5 +29,9 @@ class GamePlay < Game
 
   def shared_target
     game_target
+  end
+
+  def player_list
+    game_players.map { |player| player.details.flatten }
   end
 end
