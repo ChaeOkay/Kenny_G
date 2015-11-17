@@ -42,7 +42,10 @@ score of 0.
 
 ```
 kennyg.add_player(user: 'player1')
-  => { user: 'player1', score: 0 }
+  => { player1: {
+         points: [0],
+         points_total: 0
+     },
 ```
 
 **`.play_game`**

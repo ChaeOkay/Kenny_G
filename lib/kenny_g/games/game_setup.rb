@@ -21,6 +21,7 @@ class GameSetup < Game
 
   def add_player(player_params)
     @players_setup << player_factory.new(player_params)
+    players
   end
 
   private
