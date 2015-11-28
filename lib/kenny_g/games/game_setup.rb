@@ -20,7 +20,7 @@ class GameSetup < Game
   end
   alias_method :start_game, :play_game
 
-  def add_player(player_params)
+  def add_player(player_params:)
     @players_setup << player_factory.new(player_params)
     players
   end
