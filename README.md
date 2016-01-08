@@ -41,7 +41,7 @@ Players can only be added in game setup mode. To add a player, provide a user. T
 score of 0.
 
 ```
-kennyg.add_player(player_params: {user: 'player1'})
+kennyg.add_player('player1')
   => { player1: {
          points: [0],
          points_total: 0
