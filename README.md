@@ -52,7 +52,7 @@ kennyg.add_player('player1')
 To start recording scores, let KennyG know that the game is being played.
 
 ```
-kenny_g.play_game
+kenny_in_action = kenny_g.play_game
   => <#GamePlay>
 ```
 
@@ -60,7 +60,7 @@ kenny_g.play_game
 Scores can only be written in game play mode. To write a score, Kenny G will need a user and a point amount. Player details will be returned.
 
 ```
-kennyg.score(user: 'player1', points: 7 }
+kenny_in_action.score(user: 'player1', points: 7 }
   => { player1: {
          points: [3, 7],
          points_total: 10
@@ -71,7 +71,7 @@ kennyg.score(user: 'player1', points: 7 }
 To show game or player information, ask for details.
 
 ```
-  kenny_g.details
+  kenny_in_action.details
   => {
        players: {
             carl: {
@@ -93,7 +93,7 @@ To show game or player information, ask for details.
 If no game setup is needed, head directly into game play mode where a single player assumed with no winning target threshold.
 
 ```
-kenny_g = KennyG.play_game
+kenny_in_action = KennyG.play_game
   => #<GamePlay>
 ```
 
