@@ -100,11 +100,11 @@ kenny_in_action = KennyG.play_game
 **TODO**
 
 *  players should have a target
-*  maybe a game is more like a competition, and a player is a competitor
-*  games play should not know the player target, I don't think
+*  games play should not know the player target?
 *  game_end
 *  scoring for quick play
 *  point rounds
+
 
 
 ## Development
