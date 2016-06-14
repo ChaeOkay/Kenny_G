@@ -12,4 +12,10 @@ describe KennyG do
       expect(described_class.play_game).to be_a(GamePlay)
     end
   end
+
+  describe '.play_cat' do
+    it 'returns a game cat' do
+      expect(KennyG.play_cat).to be_a(GameCat)
+    end
+  end
 end
