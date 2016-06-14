@@ -7,7 +7,7 @@ module KennyG
     def setup_game(game_params = {})
       GameSetup.new(game_params)
     end
-    alias_method :game_setup
+    alias_method :game_setup, :setup_game
 
     def play_game(game_params = {})
       QuickGameSetup.new(game_params).play_game
